@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCV-H9-OaI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="AVFoundationSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tit-vB-oTv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgI-fl-piL">
+                                <rect key="frame" x="177" y="762" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IgI-fl-piL" secondAttribute="height" multiplier="1:1" id="8hs-6G-iee"/>
+                                    <constraint firstAttribute="height" constant="60" id="MEQ-J5-fEI"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syh-Pc-uaI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asi-eI-fuv">
+                                <rect key="frame" x="37" y="772" width="120" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="asi-eI-fuv" secondAttribute="height" multiplier="3:1" id="8NU-Wb-NzZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="KWC-PZ-0Qj"/>
+                                </constraints>
+                                <state key="normal" title="open photos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SQa-LZ-XQo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67t-lp-chv">
+                                <rect key="frame" x="257" y="772" width="120" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gvZ-mQ-7fl"/>
+                                </constraints>
+                                <state key="normal" title="change camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rDF-04-4Iu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tit-vB-oTv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3Ij-np-ple"/>
+                            <constraint firstItem="IgI-fl-piL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Jn-Hh-v6q"/>
+                            <constraint firstItem="Tit-vB-oTv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6wi-Mn-spr"/>
+                            <constraint firstItem="67t-lp-chv" firstAttribute="width" secondItem="67t-lp-chv" secondAttribute="height" multiplier="3:1" id="DYw-rf-mGk"/>
+                            <constraint firstAttribute="bottom" secondItem="Tit-vB-oTv" secondAttribute="bottom" id="DZ9-nu-uCl"/>
+                            <constraint firstItem="IgI-fl-piL" firstAttribute="leading" secondItem="asi-eI-fuv" secondAttribute="trailing" constant="20" id="G0i-nR-PKB"/>
+                            <constraint firstItem="Tit-vB-oTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JVt-Rh-4E1"/>
+                            <constraint firstItem="67t-lp-chv" firstAttribute="leading" secondItem="IgI-fl-piL" secondAttribute="trailing" constant="20" id="b6a-6Q-6tB"/>
+                            <constraint firstItem="asi-eI-fuv" firstAttribute="centerY" secondItem="IgI-fl-piL" secondAttribute="centerY" id="cKU-oP-51K"/>
+                            <constraint firstItem="67t-lp-chv" firstAttribute="centerY" secondItem="IgI-fl-piL" secondAttribute="centerY" id="lZO-oO-PGz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IgI-fl-piL" secondAttribute="bottom" constant="40" id="pKu-ik-QWU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ReC-aY-e7b"/>
+                    <connections>
+                        <outlet property="changeCameraButton" destination="67t-lp-chv" id="Wjc-aB-cys"/>
+                        <outlet property="openPhotosButton" destination="asi-eI-fuv" id="rc5-FI-Bqe"/>
+                        <outlet property="preview" destination="Tit-vB-oTv" id="XJI-8W-3ke"/>
+                        <outlet property="recordButton" destination="IgI-fl-piL" id="opT-od-2hs"/>
+                        <outlet property="recordButtonHeight" destination="MEQ-J5-fEI" id="b7U-ru-KqO"/>
+                        <segue destination="2aK-IM-Smb" kind="show" identifier="CameraToPreview" id="5Yo-V9-SH9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713.04347826086962" y="71.651785714285708"/>
+        </scene>
+        <!--Preview-->
+        <scene sceneID="wFl-dH-0Do">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preview" id="2aK-IM-Smb" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mEc-c4-831"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgc-RN-gx0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368.1159420289855" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mOj-4o-c7o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="OCV-H9-OaI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QIr-Am-HsC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="V00-CY-Bus"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4eC-Zr-NPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
